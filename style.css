@@ -1089,3 +1089,34 @@ footer {
   }
 
 }
+
+
+/* LUMORA LUXURY FINISH */
+body{background:#f7f2e8}
+.topbar{background:#120f0c;color:#dfc48c}
+header{background:rgba(20,16,12,.94);color:#f7f0e4;border-bottom-color:rgba(216,184,120,.22)}
+.logo small{color:#b8aa96} nav a:hover{color:#dfc48c;opacity:1}
+.navcta{background:linear-gradient(135deg,#d8b878,#9d753c);color:#17120d!important}
+.menu{color:#f7f0e4}
+.hero{background:radial-gradient(circle at 78% 40%,rgba(216,184,120,.28),transparent 28%),radial-gradient(circle at 18% 85%,rgba(64,42,25,.16),transparent 32%),linear-gradient(135deg,#f8f2e6,#e8ddcb 55%,#cbbba2)}
+.hero h1 i,h2 i{color:#9a7138}
+.btn{background:linear-gradient(135deg,#17130f,#3a291b);border-color:rgba(216,184,120,.7)}
+.btn:hover{background:linear-gradient(135deg,#e0bf78,#9c7137)}
+.pedestal{background:linear-gradient(120deg,#8d7a62,#f3eadb 48%,#69533b);box-shadow:30px 40px 90px rgba(44,31,18,.24)}
+.bowl{background:linear-gradient(135deg,#fffdf8,#f0e5d3 36%,#cdb58b 70%,#80613b)}
+.ring{border-color:#c7a25d;box-shadow:0 0 18px rgba(201,169,106,.35),inset 0 0 15px rgba(201,169,106,.15)}
+.scene-label{background:#17130f;color:#e7cb91}
+.collections{background:linear-gradient(180deg,#eee6d8,#e4dac9)}
+.grid article{background:#faf6ee;box-shadow:0 12px 35px rgba(55,40,25,.08);transition:transform .35s ease,box-shadow .35s ease}
+.grid article:hover{transform:translateY(-6px);box-shadow:0 22px 55px rgba(55,40,25,.15)}
+.storyvisual{background:radial-gradient(circle at 50% 45%,rgba(216,184,120,.25),transparent 30%),linear-gradient(135deg,#2a2119,#120f0c)}
+.mini-bowl{background:linear-gradient(135deg,#6e5941,#f0dfbd 48%,#8c683c);box-shadow:25px 30px 70px rgba(0,0,0,.35)}
+.showroom{background:radial-gradient(circle at 80% 20%,rgba(216,184,120,.14),transparent 28%),linear-gradient(135deg,#15110e,#2b2017);border:1px solid rgba(216,184,120,.22)}
+.showroom .eyebrow{color:#d7b873}
+.lightbtn{display:inline-block;padding:15px 23px;border:1px solid #d6b873;background:linear-gradient(135deg,#f8f0df,#d7b873);color:#17130f;font-size:10px;letter-spacing:1.4px;text-transform:uppercase}
+.map{background:radial-gradient(circle at 50% 48%,#d7b873 0 2%,transparent 2.5%),linear-gradient(135deg,#302419,#17130f);border:1px solid rgba(216,184,120,.25)}
+.map b{background:#d7b873;color:#17130f}
+.cta{background:#f7f2e8}.cta .eyebrow{color:#98713c}
+footer{background:#120f0c;color:#a89d8d;border-top-color:rgba(216,184,120,.2)}
+footer .logo{color:#f7f0e4} footer .logo small{color:#9d9282}
+@media(max-width:800px){nav{background:#17130f;color:#f7f0e4;border-top:1px solid rgba(216,184,120,.18)}.navcta{color:#17130f!important}}
