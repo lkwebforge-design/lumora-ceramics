@@ -1120,3 +1120,44 @@ header{background:rgba(20,16,12,.94);color:#f7f0e4;border-bottom-color:rgba(216,
 footer{background:#120f0c;color:#a89d8d;border-top-color:rgba(216,184,120,.2)}
 footer .logo{color:#f7f0e4} footer .logo small{color:#9d9282}
 @media(max-width:800px){nav{background:#17130f;color:#f7f0e4;border-top:1px solid rgba(216,184,120,.18)}.navcta{color:#17130f!important}}
+
+
+/* BATHWARE GALLERY */
+.bathgallery{padding:120px 7vw 0;background:#120f0c;color:#f7f0e4;overflow:hidden}
+.galleryhead{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-bottom:55px}
+.galleryhead h2{font:500 clamp(42px,5vw,72px)/1.02 "Playfair Display";letter-spacing:-2px;margin:0}
+.galleryhead h2 i{color:#d7b873}
+.galleryhead>p{max-width:390px;color:#9f9688;font-size:12px;line-height:1.8;margin:0 0 5px}
+.bathgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}
+.bathcard{background:#1c1712;border:1px solid rgba(216,184,120,.16);overflow:hidden;transition:transform .5s cubic-bezier(.2,.7,.2,1),border-color .4s ease,box-shadow .5s ease}
+.bathcard:hover{transform:translateY(-8px);border-color:rgba(216,184,120,.48);box-shadow:0 28px 70px rgba(0,0,0,.35)}
+.bathcard--large{grid-row:span 2}
+.bathcard--wide{grid-column:span 2}
+.bathimage{height:340px;position:relative;overflow:hidden;background:#2a2119}
+.bathcard--large .bathimage{height:610px}
+.bathcard--wide .bathimage{height:390px}
+.bathimage::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(12,9,7,.72));pointer-events:none}
+.bathimage img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.78) contrast(1.03);transform:scale(1.02);transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .7s ease}
+.bathcard:hover .bathimage img{transform:scale(1.09);filter:saturate(.95) contrast(1.05)}
+.bathimage span{position:absolute;left:20px;bottom:18px;z-index:2;font-size:8px;letter-spacing:2px;color:#e6ca8f}
+.bathcaption{padding:22px 22px 25px}
+.bathcaption h3{font:500 27px "Playfair Display";margin:0 0 6px}
+.bathcaption p{font-size:11px;color:#9f9688;line-height:1.7;margin:0}
+.gallerymarquee{margin:85px -7vw 0;border-top:1px solid rgba(216,184,120,.16);border-bottom:1px solid rgba(216,184,120,.16);overflow:hidden;white-space:nowrap;padding:17px 0;color:#8f826e;font-size:9px;letter-spacing:3px}
+.gallerymarquee div{display:inline-block;animation:marquee 28s linear infinite}
+.reveal{opacity:0;transform:translateY(38px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.show{opacity:1;transform:none}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@media(max-width:800px){
+  .bathgallery{padding:85px 7vw 0}
+  .galleryhead{display:block;margin-bottom:35px}
+  .galleryhead>p{margin-top:20px}
+  .bathgrid{grid-template-columns:1fr}
+  .bathcard--large,.bathcard--wide{grid-row:auto;grid-column:auto}
+  .bathimage,.bathcard--large .bathimage,.bathcard--wide .bathimage{height:330px}
+  .bathcard--large .bathimage{height:430px}
+  .gallerymarquee{margin-top:60px}
+}
+@media(prefers-reduced-motion:reduce){
+  .bathcard,.bathimage img,.gallerymarquee div,.reveal{transition:none!important;animation:none!important}
+}
