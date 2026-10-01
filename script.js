@@ -142,3 +142,40 @@ if (scene && window.innerWidth > 800) {
   });
 
 }
+
+
+/* Bathware gallery reveal + gentle image parallax */
+const galleryObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      galleryObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach((element, index) => {
+  element.style.transitionDelay = Math.min(index * 70, 420) + "ms";
+  galleryObserver.observe(element);
+});
+
+const bathGallery = document.querySelector(".bathgallery");
+
+if (bathGallery && window.innerWidth > 800) {
+  bathGallery.addEventListener("mousemove", event => {
+    const rect = bathGallery.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - .5;
+    const y = (event.clientY - rect.top) / rect.height - .5;
+
+    bathGallery.querySelectorAll(".bathcard img").forEach((img, index) => {
+      const strength = index === 0 ? 5 : 3;
+      img.style.transform = `scale(1.06) translate(${x * strength}px, ${y * strength}px)`;
+    });
+  });
+
+  bathGallery.addEventListener("mouseleave", () => {
+    bathGallery.querySelectorAll(".bathcard img").forEach(img => {
+      img.style.transform = "";
+    });
+  });
+}
