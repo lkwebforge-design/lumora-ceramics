@@ -1,10 +1,22 @@
 :root {
-  --ink: #20201d;
-  --cream: #f4f0e7;
-  --paper: #faf8f3;
-  --sand: #d4c8b8;
-  --muted: #77736b;
-  --line: #ddd6ca;
+  --ink: #151412;
+  --deep: #0d0c0b;
+
+  --cream: #eee7da;
+  --paper: #f8f4ec;
+
+  --ivory: #fffdf7;
+  --champagne: #c9a96a;
+  --gold: #d8b878;
+  --gold-soft: #ead6a5;
+
+  --espresso: #2b211a;
+  --bronze: #72583c;
+
+  --stone: #aaa092;
+  --muted: #81796d;
+
+  --line: #cfc2ad;
 }
 
 * {
