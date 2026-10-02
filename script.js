@@ -179,3 +179,40 @@ if (bathGallery && window.innerWidth > 800) {
     });
   });
 }
+
+
+/* Immersive 3D object interaction */
+const hero3d = document.querySelector(".scene");
+const heroObject = document.querySelector(".lux-object");
+if (hero3d && heroObject && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  let targetX = -10, targetY = 9, currentX = targetX, currentY = targetY;
+  let raf = 0;
+  const animate3D = () => {
+    currentX += (targetX - currentX) * 0.08;
+    currentY += (targetY - currentY) * 0.08;
+    heroObject.style.transform = `translate(-50%,-50%) rotateX(${currentY}deg) rotateY(${currentX}deg) rotateZ(-2deg)`;
+    raf = requestAnimationFrame(animate3D);
+  };
+  animate3D();
+
+  hero3d.addEventListener("pointermove", event => {
+    const r = hero3d.getBoundingClientRect();
+    const px = (event.clientX - r.left) / r.width - 0.5;
+    const py = (event.clientY - r.top) / r.height - 0.5;
+    targetX = px * 18 - 4;
+    targetY = -py * 14 + 8;
+  });
+  hero3d.addEventListener("pointerleave", () => {
+    targetX = -10;
+    targetY = 9;
+  });
+
+  const onScroll3D = () => {
+    const r = hero3d.getBoundingClientRect();
+    const progress = Math.max(-1, Math.min(1, -r.top / Math.max(r.height, 1)));
+    heroObject.style.setProperty("--scroll-depth", progress.toFixed(3));
+  };
+  window.addEventListener("scroll", onScroll3D, {passive:true});
+  onScroll3D();
+  window.addEventListener("pagehide", () => cancelAnimationFrame(raf), {once:true});
+}
