@@ -1320,3 +1320,12 @@ footer .logo{color:#f5eee3}
  .lux-object{width:88%;height:52%}.floating-card{padding:11px 12px;min-width:120px}.card-top{right:3%;top:13%}.card-bottom{left:3%;bottom:13%}
 }
 @media(prefers-reduced-motion:reduce){.orbit-a,.orbit-b,.lux-object,.waterPulse,.floating-card{animation:none!important}}
+
+
+/* 3D HERO VISIBILITY FIX */
+.scene>.depth-orbit,
+.scene>.object-shadow,
+.scene>.lux-object,
+.scene>.floating-card,
+.scene>.scene-label{display:block!important}
+.scene>.floating-card{display:flex!important}
