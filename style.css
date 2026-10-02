@@ -1250,3 +1250,42 @@ footer .logo{color:#f5eee3}
 .menu{color:#f4eee2}
 @keyframes heroSweep{0%,65%{transform:translateX(-100%)}85%,100%{transform:translateX(100%)}}
 @media(max-width:800px){nav{background:#0b0a09;color:#f4eee2;border-top-color:rgba(216,184,120,.2)}}
+
+
+/* LUMORA 2.0 EDITORIAL LUXURY */
+.hero{min-height:calc(100vh - 112px)!important;padding:8vw 7vw!important;display:grid!important;grid-template-columns:minmax(0,1fr) minmax(360px,.9fr)!important;align-items:center!important;gap:7vw!important;background:radial-gradient(circle at 75% 40%,rgba(202,166,106,.12),transparent 28%),linear-gradient(135deg,#090807,#17110d)!important}
+.copy{max-width:680px!important}
+.hero h1{font-size:clamp(58px,8vw,116px)!important;line-height:.9!important;letter-spacing:-.055em!important;font-weight:500!important}
+.hero h1 i{font-family:"Playfair Display",serif!important;color:#d7b77b!important}
+.lead{max-width:560px!important;color:#a69c90!important;line-height:1.75!important}
+.scene{width:100%!important;height:min(690px,68vh)!important;min-height:460px!important;overflow:hidden!important;border:1px solid rgba(214,184,126,.18)!important;border-radius:2px!important;filter:none!important;background:linear-gradient(180deg,rgba(7,6,5,.04),rgba(7,6,5,.4)),url("https://images.pexels.com/photos/7534536/pexels-photo-7534536.jpeg?auto=compress&cs=tinysrgb&w=1800") center/cover!important;box-shadow:0 35px 90px rgba(0,0,0,.45)!important}
+.scene:after{content:"LUMORA / BATH EDIT";position:absolute;left:24px;bottom:22px;font-size:9px;letter-spacing:.24em;color:#e2c58e;z-index:4}
+.scene>*{display:none!important}
+.intro{padding:13vw 12vw!important;background:#0b0a09!important}
+.intro h2{max-width:900px!important;font-size:clamp(40px,6vw,78px)!important;line-height:1.02!important;letter-spacing:-.045em!important}
+.collections{padding:10vw 7vw!important;background:#100e0c!important}
+.head>div h2{font-size:clamp(42px,5vw,72px)!important;letter-spacing:-.045em!important}
+.grid{gap:18px!important}
+.grid article{background:#151210!important;border-color:rgba(214,184,126,.16)!important;border-radius:2px!important;overflow:hidden!important}
+.bathgallery{padding:11vw 7vw!important;background:#090807!important}
+.galleryhead{display:grid!important;grid-template-columns:1fr .55fr!important;gap:50px!important;align-items:end!important;margin-bottom:55px!important}
+.galleryhead h2{font-size:clamp(46px,6vw,82px)!important;line-height:.95!important;letter-spacing:-.05em!important}
+.bathgrid{grid-template-columns:1.25fr .75fr!important;gap:18px!important}
+.bathcard{background:#12100e!important;border:1px solid rgba(214,184,126,.16)!important;border-radius:2px!important}
+.bathcard--wide{grid-column:1/-1!important}
+.bathimage img{filter:brightness(.78) saturate(.75)!important;transition:transform .9s ease,filter .6s!important}
+.bathcard:hover .bathimage img{transform:scale(1.035)!important;filter:brightness(.9) saturate(.9)!important}
+.story{padding:10vw 7vw!important;background:#0f0d0b!important;gap:7vw!important}
+.storycopy h2{font-size:clamp(45px,6vw,78px)!important;line-height:.98!important;letter-spacing:-.045em!important}
+.showroom{margin:0 7vw!important;border-radius:2px!important}
+.cta{padding:14vw 7vw!important}
+.cta h2{font-size:clamp(48px,7vw,94px)!important;line-height:.94!important;letter-spacing:-.05em!important}
+@media(max-width:800px){
+.hero{grid-template-columns:1fr!important;min-height:auto!important;padding:70px 6vw 40px!important}
+.hero h1{font-size:clamp(52px,15vw,78px)!important}
+.scene{min-height:420px!important;height:62vh!important}
+.galleryhead,.bathgrid{grid-template-columns:1fr!important}
+.bathcard--wide{grid-column:auto!important}
+.story{grid-template-columns:1fr!important}
+.showroom{margin:0 4vw!important}
+}
