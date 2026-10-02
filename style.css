@@ -1289,3 +1289,34 @@ footer .logo{color:#f5eee3}
 .story{grid-template-columns:1fr!important}
 .showroom{margin:0 4vw!important}
 }
+
+/* IMMERSIVE 3D BATH HERO */
+.scene{perspective:1200px!important;transform-style:preserve-3d!important;background:radial-gradient(circle at 50% 42%,#30251b 0,#17110d 38%,#090807 78%)!important;isolation:isolate}
+.scene:before{background:radial-gradient(circle at 50% 35%,rgba(226,196,137,.12),transparent 34%),linear-gradient(145deg,rgba(255,255,255,.035),transparent 35%,rgba(0,0,0,.5))!important}
+.depth-orbit{position:absolute;left:50%;top:48%;border:1px solid rgba(220,185,119,.2);border-radius:50%;transform-style:preserve-3d;pointer-events:none;z-index:1}
+.orbit-a{width:72%;height:38%;transform:translate(-50%,-50%) rotateX(67deg) rotateZ(-18deg);animation:orbitA 12s linear infinite}
+.orbit-b{width:52%;height:28%;transform:translate(-50%,-50%) rotateX(72deg) rotateZ(22deg);border-color:rgba(255,238,201,.12);animation:orbitB 9s linear infinite reverse}
+.object-shadow{position:absolute;left:50%;bottom:17%;width:60%;height:13%;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(0,0,0,.75),transparent 70%);filter:blur(15px);z-index:2}
+.lux-object{position:absolute;left:50%;top:47%;width:72%;height:55%;transform:translate(-50%,-50%) rotateX(9deg) rotateY(-10deg) rotateZ(-2deg);transform-style:preserve-3d;transition:transform .18s ease-out;z-index:3;animation:objectFloat 6s ease-in-out infinite}
+.bath-body{position:absolute;left:8%;top:14%;width:84%;height:68%;border-radius:48% 48% 42% 42% / 25% 25% 38% 38%;background:linear-gradient(145deg,#efe5d2 0%,#bca98e 23%,#74624f 48%,#30251c 76%,#17120e 100%);box-shadow:inset 14px 16px 25px rgba(255,244,217,.28),inset -20px -25px 35px rgba(0,0,0,.55),0 35px 50px rgba(0,0,0,.6);transform:rotateX(3deg);transform-style:preserve-3d}
+.bath-rim{position:absolute;inset:4% 4% 27%;border-radius:48% 48% 44% 44%;background:linear-gradient(145deg,#f4ead7,#927d64 55%,#30251b);box-shadow:inset 0 0 0 8px rgba(255,242,216,.18),inset 0 -20px 30px rgba(0,0,0,.45)}
+.bath-inner{position:absolute;left:8%;right:8%;top:13%;height:43%;border-radius:50%;background:radial-gradient(ellipse at 50% 45%,#080706 0 30%,#1b140e 52%,#6f5942 68%,#dfc79f 73%,#6e5a43 77%,#211810 100%);box-shadow:inset 0 8px 12px rgba(255,238,200,.2)}
+.bath-water{position:absolute;left:17%;right:17%;top:20%;height:26%;border-radius:50%;background:radial-gradient(ellipse,#17110d,#050504 72%);box-shadow:0 0 0 2px rgba(224,195,146,.28),0 0 25px rgba(202,166,106,.18);animation:waterPulse 4s ease-in-out infinite}
+.bath-leg{position:absolute;bottom:-10%;width:14%;height:24%;background:linear-gradient(90deg,#15100c,#b59669 45%,#3a2a1b);transform:skew(-7deg);box-shadow:0 15px 20px rgba(0,0,0,.45)}
+.leg-a{left:15%}.leg-b{right:15%}
+.object-highlight{position:absolute;left:17%;top:15%;width:35%;height:7%;border-radius:50%;background:rgba(255,246,225,.2);filter:blur(12px);transform:rotate(-10deg);z-index:4}
+.floating-card{position:absolute;z-index:6;display:flex;flex-direction:column;gap:4px;padding:15px 18px;background:rgba(9,8,7,.72);border:1px solid rgba(224,195,146,.22);backdrop-filter:blur(12px);box-shadow:0 20px 40px rgba(0,0,0,.35);color:#eee5d6;min-width:145px}
+.floating-card span{font-size:8px;letter-spacing:.2em;color:#c9a96f}
+.floating-card b{font-size:12px;letter-spacing:.12em;font-weight:500}.floating-card small{font-size:9px;color:#988c7d}
+.card-top{right:5%;top:18%;animation:cardFloat 5s ease-in-out infinite}
+.card-bottom{left:5%;bottom:18%;animation:cardFloat 6s ease-in-out infinite reverse}
+.scene-label{z-index:7!important;letter-spacing:.18em!important}
+@keyframes objectFloat{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@keyframes waterPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035,.94)}}
+@keyframes orbitA{to{transform:translate(-50%,-50%) rotateX(67deg) rotateZ(342deg)}}
+@keyframes orbitB{to{transform:translate(-50%,-50%) rotateX(72deg) rotateZ(-338deg)}}
+@keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(max-width:800px){
+ .lux-object{width:88%;height:52%}.floating-card{padding:11px 12px;min-width:120px}.card-top{right:3%;top:13%}.card-bottom{left:3%;bottom:13%}
+}
+@media(prefers-reduced-motion:reduce){.orbit-a,.orbit-b,.lux-object,.waterPulse,.floating-card{animation:none!important}}
